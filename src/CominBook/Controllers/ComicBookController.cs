@@ -9,5 +9,9 @@ namespace CominBook.Controllers
     public class ComicBookController :Controller 
 
     {
+        public string Detail()
+        {
+            return "This is my Firat MVC project";
+        }
     }
 }
