@@ -11,7 +11,7 @@ namespace CominBook.Controllers
     {
         public string Detail()
         {
-            return "This is my Firat MVC project";
+            return "This is my First MVC project";
         }
     }
 }
