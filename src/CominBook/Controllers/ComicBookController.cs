@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 
@@ -9,9 +10,15 @@ namespace CominBook.Controllers
     public class ComicBookController :Controller 
 
     {
-        public string Detail()
+        public ResultAction Detail()
         {
-            return "This is my First MVC project";
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                return Redirect("/");
+
+            }
+            return content("Hello this is the Comic BookStore");
+
         }
     }
 }
