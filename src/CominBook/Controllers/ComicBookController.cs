@@ -10,14 +10,21 @@ namespace CominBook.Controllers
     public class ComicBookController :Controller 
 
     {
-        public ResultAction Detail()
+        public ActionResult Detail()
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
-            {
-                return Redirect("/");
+            
 
-            }
-            return content("Hello this is the Comic BookStore");
+                ViewBag.Title = "Super Mario 64";
+                Viewbag.Description = "Super Mario 64 is a 1996 platform video game developed and published by Nintendo for the Nintendo 64.";
+                Viewbag.Characters = new string[]
+                {
+        "Mario",
+        "Princess Peach",
+        "Bowser",
+        "Toad",
+        "Yoshi"
+                };
+                return View();
 
         }
     }
